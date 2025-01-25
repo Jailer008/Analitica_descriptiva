@@ -51,37 +51,38 @@ Para ejecutar este proyecto, necesitas tener instalado Python 3.8 o superior. La
    ```bash
    pip install -r requirements.txt
    ```
-Flujo de Trabajo
-1. Preprocesamiento de Datos
-El preprocesamiento incluye:
+## Flujo de Trabajo
 
-Creación de nuevas columnas (por ejemplo, Age a partir de Year).
+### 1. Preprocesamiento de Datos
+   El preprocesamiento incluye:
+   
+   Creación de nuevas columnas (por ejemplo, Age a partir de Year).
+   
+   Eliminación de columnas no relevantes (Year, Car_Name).
+   
+   Codificación de variables categóricas (OneHotEncoder).
+   
+   Escalado de variables numéricas (MinMaxScaler o StandardScaler).
 
-Eliminación de columnas no relevantes (Year, Car_Name).
+### 2. Entrenamiento del Modelo
+   Se utiliza un pipeline que incluye:
+   
+   Preprocesamiento.
+   
+   Selección de características (SelectKBest).
+   
+   Reducción de dimensionalidad (PCA).
+   
+   Modelo de clasificación o regresión (LinearRegression, SVC, MLPClassifier, etc.).
 
-Codificación de variables categóricas (OneHotEncoder).
-
-Escalado de variables numéricas (MinMaxScaler o StandardScaler).
-
-2. Entrenamiento del Modelo
-Se utiliza un pipeline que incluye:
-
-Preprocesamiento.
-
-Selección de características (SelectKBest).
-
-Reducción de dimensionalidad (PCA).
-
-Modelo de clasificación o regresión (LinearRegression, SVC, MLPClassifier, etc.).
-
-3. Optimización de Hiperparámetros
+### 3. Optimización de Hiperparámetros
   Se utiliza GridSearchCV para optimizar los hiperparámetros del modelo. Las métricas de evaluación incluyen:
 
   balanced_accuracy para problemas de clasificación.
 
   neg_mean_absolute_error para problemas de regresión.
 
-4. Evaluación del Modelo
+### 4. Evaluación del Modelo
   Se calculan métricas como:
   
   R²: Coeficiente de determinación.
@@ -94,44 +95,44 @@ Modelo de clasificación o regresión (LinearRegression, SVC, MLPClassifier, etc
   
   Las métricas se guardan en un archivo JSON (metrics.json) en la carpeta files/output.
 
-5. Guardado del Modelo
+### 5. Guardado del Modelo
   El modelo entrenado se guarda en un archivo comprimido (model.pkl.gz) en la carpeta files/models.
 
-Ejecución del Proyecto
+## Ejecución del Proyecto
   Preprocesamiento:
-  '''
+  ```bash
     python scripts/preprocesamiento.py
-   '''
+   ```
   Entrenamiento:
-  '''
+  ```bash
     python scripts/entrenamiento.py
-   '''
+   ```
   Evaluación:
-  '''
+  ```bash
     python scripts/evaluacion.py
-   '''
-Resultados
-Los resultados del modelo (métricas y matrices de confusión) se guardan en la carpeta files/output. Puedes visualizarlos directamente en el archivo metrics.json.
+   ```
+## Resultados:
+   Los resultados del modelo (métricas y matrices de confusión) se guardan en la carpeta files/output. Puedes visualizarlos directamente en el archivo metrics.json.
 
-Contribuciones
-Si deseas contribuir a este proyecto, sigue estos pasos:
+## Contribuciones:
+   Si deseas contribuir a este proyecto, sigue estos pasos:
+   
+   Haz un fork del repositorio.
+   
+   Crea una nueva rama (git checkout -b feature/nueva-funcionalidad).
+   
+   Realiza tus cambios y haz commit (git commit -m 'Añadir nueva funcionalidad').
+   
+   Haz push a la rama (git push origin feature/nueva-funcionalidad).
+   
+   Abre un Pull Request.
 
-Haz un fork del repositorio.
-
-Crea una nueva rama (git checkout -b feature/nueva-funcionalidad).
-
-Realiza tus cambios y haz commit (git commit -m 'Añadir nueva funcionalidad').
-
-Haz push a la rama (git push origin feature/nueva-funcionalidad).
-
-Abre un Pull Request.
-
-Licencia
-Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
-
-¡Gracias por revisar este proyecto! Si tienes alguna pregunta o sugerencia, no dudes en abrir un issue o contactarme.
-
-Copy
+## Licencia
+   Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
+   
+   ¡Gracias por revisar este proyecto! Si tienes alguna pregunta o sugerencia, no dudes en abrir un issue o contactarme.
+   
+   Copy
 
 ### Personalización
 - Cambia `tu_usuario/tu_repositorio` por tu nombre de usuario y repositorio de GitHub.
