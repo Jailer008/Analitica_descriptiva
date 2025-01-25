@@ -97,12 +97,17 @@ Modelo de clasificación o regresión (LinearRegression, SVC, MLPClassifier, etc
 
 Ejecución del Proyecto
   Preprocesamiento:
+  '''
     python scripts/preprocesamiento.py
+   '''
   Entrenamiento:
+  '''
     python scripts/entrenamiento.py
+   '''
   Evaluación:
+  '''
     python scripts/evaluacion.py
-    
+   '''
 Resultados
 Los resultados del modelo (métricas y matrices de confusión) se guardan en la carpeta files/output. Puedes visualizarlos directamente en el archivo metrics.json.
 
