@@ -46,9 +46,11 @@ Para ejecutar este proyecto, necesitas tener instalado Python 3.8 o superior. La
    ```bash
    git clone https://github.com/tu_usuario/tu_repositorio.git
    cd tu_repositorio
+   ```
 2. Instala las dependencias:
+   ```bash
    pip install -r requirements.txt
-
+   ```
 Flujo de Trabajo
 1. Preprocesamiento de Datos
 El preprocesamiento incluye:
